@@ -13,4 +13,4 @@ O objetivo deste projeto é criar um programa em C para gerenciar uma lista de c
 ## Como Compilar e Executar
 Para compilar o programa, execute os seguintes comandos no terminal:
 
-gcc main.c agenda.c -o gerenciador_contatos
+gcc main.c agenda.c && ./gerenciador_contatos
