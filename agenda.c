@@ -20,6 +20,7 @@ void adicionarContato(Contato lista[], int *totalContatos) {
     } else {
         printf("A lista de contatos está cheia!\n");
     }
+
 }
 
 void listarContatos(Contato lista[], int totalContatos) {
@@ -56,15 +57,5 @@ void deletarContato(Contato lista[], int *totalContatos) {
     }
     printf("Contato não encontrado!\n");
 }
-
-void salvarAgenda(Contato lista[], int totalContatos) {
-    FILE *arquivo;
-    arquivo = fopen("agenda.bin", "wb");
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo!\n");
-        return;
-    }
-    fwrite(lista, sizeof(Contato), totalContatos, arquivo);
-    fclose(arquivo);
-    printf("Agenda salva com sucesso!\n");
 }
+
