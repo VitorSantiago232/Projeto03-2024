@@ -78,5 +78,5 @@ void carregarAgenda(Contato lista[], int *totalContatos) {
     }
     *totalContatos = fread(lista, sizeof(Contato), MAX_CONTACTS, arquivo);
     fclose(arquivo);
-    printf("Agenda carregada com sucesso!\n");
+    printf("Sua agenda foi carregada com sucesso!\n");
 }
