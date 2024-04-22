@@ -68,15 +68,3 @@ void salvarAgenda(Contato lista[], int totalContatos) {
     fclose(arquivo);
     printf("Agenda salva com sucesso!\n");
 }
-
-void carregarAgenda(Contato lista[], int *totalContatos) {
-    FILE *arquivo;
-    arquivo = fopen("agenda.bin", "rb");
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo!\n");
-        return;
-    }
-    *totalContatos = fread(lista, sizeof(Contato), MAX_CONTACTS, arquivo);
-    fclose(arquivo);
-    printf("Agenda carregada com sucesso!\n");
-}
