@@ -34,7 +34,7 @@ int main() {
                 carregarAgenda(listaContatos, &totalContatos);
                 break;
             case 6:
-                printf("Saindo...\n");
+                printf("Você esta saindo :(\n");
                 break;
             default:
                 printf("Opção inválida!\n");
