@@ -16,4 +16,5 @@ void deletarContato(Contato lista[], int *totalContatos);
 void salvarAgenda(Contato lista[], int totalContatos);
 void carregarAgenda(Contato lista[], int *totalContatos);
 
-#endif /* AGENDA_H */
+#endif 
+/* AGENDA_H */
