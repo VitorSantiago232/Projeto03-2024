@@ -68,3 +68,15 @@ void carregarAgenda(Contato lista[], int *totalContatos) {
     fclose(arquivo); // Fecha o arquivo após a leitura.
     printf("Sua agenda foi carregada com sucesso!\n"); // Exibe uma mensagem indicando que a agenda foi carregada com sucesso.
 }
+
+void salvarAgenda(Contato lista[], int totalContatos) {
+    FILE *arquivo;
+    arquivo = fopen("agenda.bin", "wb");
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo!\n");
+        return;
+    }
+    fwrite(lista, sizeof(Contato), totalContatos, arquivo);
+    fclose(arquivo);
+    printf("Agenda salva com sucesso!\n");
+}

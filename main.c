@@ -6,6 +6,7 @@ int main() {
   int totalContatos = 0; // Inicializa o número total de contatos como zero.
   int opcao; // Declara uma variável para armazenar a opção escolhida pelo usuário.
 
+  carregarAgenda(listaContatos, &totalContatos); // Chama a função carregarAgenda() para carregar os contatos de um arquivo.
   do {
     printf("\nMenu:\n");
     printf("1. Adicionar contato\n");
@@ -34,6 +35,7 @@ int main() {
       carregarAgenda(listaContatos, &totalContatos); // Chama a função carregarAgenda() para carregar os contatos de um arquivo.
       break; // Sai do switch-case.
     case 6: // Se a opção for 6:
+      salvarAgenda(listaContatos, totalContatos); // Chama a função salvarAgenda() para salvar os contatos em um arquivo.
       printf("Você está saindo :(\n"); // Exibe uma mensagem indicando que o usuário está saindo.
       break; // Sai do switch-case.
     default: // Se a opção não corresponder a nenhum dos casos anteriores:
