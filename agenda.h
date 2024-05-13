@@ -1,4 +1,3 @@
-#ifndef AGENDA_H // Diretiva de inclusão condicional: verifica se AGENDA_H não foi definido anteriormente
 #define AGENDA_H 
 // Define AGENDA_H para evitar múltiplas inclusões do mesmo arquivo de cabeçalho
 
@@ -19,9 +18,4 @@ void deletarContato(Contato lista[], int *totalContatos); // Deleta um contato d
 void salvarAgenda(Contato lista[], int totalContatos); // Salva os contatos em um arquivo
 void carregarAgenda(Contato lista[], int *totalContatos); // Carrega os contatos de um arquivo para a lista
 
-<<<<<<< HEAD
-#endif // Fim da diretiva de inclusão condicional
-=======
-#endif 
-/* AGENDA_H */
->>>>>>> 2bad78366b3a81ef1e3e872c169d5271098886dc
+
