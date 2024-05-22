@@ -1,21 +1,25 @@
-#define AGENDA_H 
-// Define AGENDA_H para evitar múltiplas inclusões do mesmo arquivo de cabeçalho
+#ifndef AGENDA_H
+#define AGENDA_H
 
-#define MAX_CONTACTS 255 
-// Define o tamanho máximo da lista de contatos
+#define MAX_CONTACTS 255
 
-typedef struct { // Define uma estrutura chamada Contato para armazenar informações sobre um contato
-    char nome[50]; // Campo para o nome do contato
-    char sobrenome[50]; // Campo para o sobrenome do contato
-    char email[100]; // Campo para o email do contato
-    char telefone[15]; // Campo para o telefone do contato
-} Contato; // Final da definição da estrutura
+typedef enum {PESSOAL, TRABALHO} TipoLista;
 
-// Protótipos de função para manipular contatos
-void adicionarContato(Contato lista[], int *totalContatos); // Adiciona um novo contato à lista
-void listarContatos(Contato lista[], int totalContatos); // Lista todos os contatos da lista
-void deletarContato(Contato lista[], int *totalContatos); // Deleta um contato da lista
-void salvarAgenda(Contato lista[], int totalContatos); // Salva os contatos em um arquivo
-void carregarAgenda(Contato lista[], int *totalContatos); // Carrega os contatos de um arquivo para a lista
+typedef struct {
+    char nome[50];
+    char sobrenome[50];
+    char email[100];
+    char telefone[15];
+    TipoLista tipo;
+} Contato;
 
+void adicionarContato(Contato lista[], int *totalContatos);
+void listarContatos(Contato lista[], int totalContatos);
+void deletarContato(Contato lista[], int *totalContatos);
+void salvarAgenda(Contato lista[], int totalContatos);
+void carregarAgenda(Contato lista[], int *totalContatos);
+int validarEmail(const char *email);
+int telefoneExiste(const Contato lista[], int totalContatos, const char *telefone);
+void alterarContato(Contato lista[], int totalContatos);
 
+#endif
